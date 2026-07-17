@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane prefHeight="500"
+            prefWidth="500"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.map.seatingmapgenerator.controller.dialogs.StudentDialogController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <top>
+        <VBox>
+            <Label text="Informações do aluno"
+                   styleClass="title" />
+
+            <Separator/>
+        </VBox>
+    </top>
+
+   <center>
+       <VBox BorderPane.alignment="CENTER"
+             spacing="20">
+
+           <Label text="Matrícula:"
+                  styleClass="inputLabel"/>
+
+           <TextField fx:id="idField"
+                      promptText="Insira a matrícula do aluno..."
+                      styleClass="textField"/>
+
+           <Label text="Nome:"
+                  styleClass="inputLabel"/>
+
+           <TextField fx:id="nameField"
+                      promptText="Insira o nome do aluno..."
+                      styleClass="textField"/>
+
+           <Label text="Série:"
+                  styleClass="inputLabel"/>
+
+           <ComboBox fx:id="gradeBox"
+                     prefWidth="150.0"
+                     styleClass="combo-box"/>
+
+           <Label fx:id="errorLabel"
+                  prefWidth="400.0"
+                  prefHeight="70.0"
+                  styleClass="errorMessage">
+
+               <padding>
+                   <Insets top="20" right="20" bottom="20" left="20"/>
+               </padding>
+
+           </Label>
+
+           <HBox alignment="CENTER_RIGHT"
+                 spacing="10">
+
+               <Button fx:id="cancelButton"
+                       text="Cancelar"
+                       styleClass="cancelButton"
+                       onAction="#onCancel"/>
+
+               <Button fx:id="saveButton"
+                       text="Salvar"
+                       styleClass="saveButton"
+                       onAction="#onSave"/>
+
+           </HBox>
+
+       </VBox>
+   </center>
+</BorderPane>

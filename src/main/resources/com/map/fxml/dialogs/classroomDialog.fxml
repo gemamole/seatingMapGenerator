@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="500"
+            prefWidth="500"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.map.seatingmapgenerator.controller.dialogs.ClassroomDialogController">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <top>
+        <VBox>
+            <Label styleClass="title"
+                   text="Informações da sala" />
+
+            <Separator />
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="20"
+              BorderPane.alignment="CENTER">
+
+            <Label styleClass="inputLabel"
+                   text="Sala:" />
+
+            <TextField fx:id="idField"
+                       promptText="Insira o número da sala..."
+                       styleClass="textField" />
+
+            <HBox alignment="CENTER"
+                  spacing="20">
+
+                <VBox spacing="20">
+                    <Label styleClass="inputLabel"
+                           text="Fileiras:"/>
+
+                    <ComboBox fx:id="rowBox"
+                              prefWidth="150.0"
+                              styleClass="combo-box"/>
+                </VBox>
+
+                <VBox spacing="20">
+                    <Label styleClass="inputLabel"
+                           text="Colunas:"/>
+
+                    <ComboBox fx:id="columnBox"
+                              prefWidth="150.0"
+                              styleClass="combo-box"/>
+                </VBox>
+
+            </HBox>
+
+            <Label styleClass="inputLabel"
+                   text="Capacidade de alunos:" />
+
+            <TextField fx:id="capacityField"
+                       promptText="Insira o número máximo de alunos na sala..."
+                       styleClass="textField" />
+
+            <Label fx:id="errorLabel"
+                   prefHeight="70.0"
+                   prefWidth="400.0"
+                   styleClass="errorMessage">
+
+                <padding>
+                    <Insets bottom="20" left="20" right="20" top="20" />
+                </padding>
+
+            </Label>
+
+            <HBox alignment="CENTER_RIGHT"
+                  spacing="10">
+
+                <Button fx:id="cancelButton"
+                        text="Cancelar"
+                        styleClass="cancelButton"
+                        onAction="#onCancel" />
+
+                <Button fx:id="saveButton"
+                        text="Salvar"
+                        styleClass="saveButton"
+                        onAction="#onSave" />
+
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

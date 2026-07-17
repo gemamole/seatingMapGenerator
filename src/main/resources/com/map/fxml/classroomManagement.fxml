@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.map.seatingmapgenerator.controller.ClassroomManagement"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <top>
+        <VBox>
+            <HBox spacing="20"
+                  alignment="CENTER_LEFT">
+
+                <Button fx:id="goBack"
+                        text="Voltar"
+                        styleClass="returnButton"
+                        onAction="#goBack" />
+
+                <Label text="Gerenciamento de salas"
+                       styleClass="title" />
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <Label text="v1.0.0"
+                       styleClass="version" />
+            </HBox>
+
+            <Separator/>
+
+            <TextField fx:id="searchField"
+                       promptText="Buscar por nome..."
+                       styleClass="searchField"/>
+        </VBox>
+    </top>
+
+    <center>
+        <HBox alignment="CENTER"
+              spacing="15">
+
+            <TableView fx:id="classroomTable"
+                       maxHeight="400"
+                       HBox.hgrow="ALWAYS"
+                       styleClass="resultTable">
+
+                <columns>
+                    <TableColumn fx:id="idColumn"
+                                 prefWidth="370"
+                                 resizable="false"
+                                 text="Nome"/>
+
+                    <TableColumn fx:id="rowColumn"
+                                 prefWidth="100"
+                                 resizable="false"
+                                 text="Fileiras"/>
+
+                    <TableColumn fx:id="columnColumn"
+                                 prefWidth="100"
+                                 resizable="false"
+                                 text="Colunas"/>
+
+                    <TableColumn fx:id="capacityColumn"
+                                 prefWidth="100"
+                                 resizable="false"
+                                 text="Capacidade"/>
+
+                </columns>
+            </TableView>
+
+            <VBox alignment="CENTER"
+                  spacing="10">
+
+                <Button fx:id="addButton"
+                        text="Adicionar sala"
+                        styleClass="addButton"
+                        onAction="#onAdd"/>
+
+                <Button fx:id="editButton"
+                        text="Editar sala"
+                        styleClass="editButton"
+                        onAction="#onEdit"/>
+
+                <Button fx:id="removeButton"
+                        text="Remover sala"
+                        styleClass="removeButton"
+                        onAction="#onRemove"/>
+            </VBox>
+        </HBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER"
+              styleClass="footer">
+
+            <Label text="© 2026 Leonardo Omoto Sato"/>
+
+        </HBox>
+    </bottom>
+
+</BorderPane>

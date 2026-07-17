@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.map.seatingmapgenerator.controller.StartMenu">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <top>
+        <VBox>
+            <HBox spacing="20"
+                  alignment="CENTER_LEFT">
+
+                <Label text="Gerador de mapa de sala"
+                       styleClass="title"/>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <Label text="v1.0.0"
+                       styleClass="version"/>
+            </HBox>
+
+            <Separator/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER"
+              spacing="18">
+
+            <Button fx:id="generateButton"
+                     styleClass="menuButton"
+                     text="Gerar mapa"
+                     onAction="#generateMap" />
+
+            <Button fx:id="viewButton"
+                    styleClass="menuButton"
+                    text="Visualizar mapas"
+                    onAction="#openMaps" />
+
+            <Button fx:id="studentsButton"
+                    styleClass="menuButton"
+                    text="Gerenciar alunos"
+                    onAction="#manageStudents" />
+
+            <Button fx:id="roomsButton"
+                    styleClass="menuButton"
+                    text="Gerenciar salas"
+                    onAction="#manageRooms" />
+
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER"
+              styleClass="footer">
+
+            <Label text="© 2026 Leonardo Omoto Sato"/>
+
+        </HBox>
+    </bottom>
+
+</BorderPane>

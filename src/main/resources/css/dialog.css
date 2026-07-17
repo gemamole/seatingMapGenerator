@@ -1,0 +1,94 @@
+.root{
+    -fx-background-color:white;
+}
+
+.title{
+    -fx-font-size:25px;
+    -fx-font-weight:bold;
+    -fx-font-family:"Google Sans Flex"
+}
+
+.inputLabel{
+    -fx-font-size:15px;
+    -fx-font-family:"Google Sans Flex"
+}
+
+.textField{
+    -fx-pref-height:40;
+    -fx-background-radius:12;
+    -fx-border-radius:12;
+    -fx-border-color:#D9D9D9;
+    -fx-background-color:white;
+    -fx-font-size:15;
+    -fx-font-family:"Google Sans Flex";
+    -fx-padding:0 15;
+}
+
+.textField:focused{
+    -fx-border-color:#3B6EF8;
+}
+
+.combo-box{
+    -fx-pref-height:40;
+    -fx-background-radius:12;
+    -fx-border-radius:12;
+    -fx-border-color:#D9D9D9;
+    -fx-background-color:white;
+    -fx-font-size:15px;
+    -fx-font-family:"Google Sans Flex";
+}
+
+.combo-box:hover{
+    -fx-background-color:#F6F9FF;
+    -fx-border-color:#3B6EF8;
+}
+
+.errorMessage{
+    -fx-background-color: #eca0a0;
+    -fx-border-color:#e50415;
+    -fx-background-radius:18;
+    -fx-border-radius:18;
+    -fx-text-fill:#e50415;
+    -fx-font-family:"Google Sans Flex";
+}
+
+.saveButton{
+    -fx-background-color:#3B6EF8;
+    -fx-border-color:#3B6EF8;
+    -fx-background-radius:18;
+    -fx-border-radius:18;
+    -fx-text-fill:white;
+    -fx-font-family:"Google Sans Flex";
+}
+
+.saveButton:hover{
+    -fx-border-color:#1552ea;
+    -fx-text-fill:#1552ea;
+}
+
+.deleteButton{
+    -fx-background-color:#FF4253E8;
+    -fx-border-color:#FF4253E8;
+    -fx-background-radius:18;
+    -fx-border-radius:18;
+    -fx-text-fill:white;
+    -fx-font-family:"Google Sans Flex";}
+
+.deleteButton:hover{
+    -fx-border-color:#e50415;
+    -fx-text-fill:#e50415;
+}
+
+.cancelButton{
+    -fx-background-color:white;
+    -fx-background-radius:18;
+    -fx-border-radius:18;
+    -fx-border-color:#D9D9D9;
+    -fx-font-family:"Google Sans Flex";
+}
+
+.cancelButton:hover{
+    -fx-background-color:#F6F9FF;
+    -fx-border-color:#3B6EF8;
+    -fx-text-fill:#3B6EF8;
+}

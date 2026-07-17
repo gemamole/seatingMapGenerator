@@ -1,0 +1,185 @@
+.root{
+    -fx-background-color:white;
+}
+
+.title{
+    -fx-font-size:28px;
+    -fx-font-family:"Google Sans Flex";
+}
+
+.version{
+    -fx-background-color:#EAF2FF;
+    -fx-background-radius:15;
+    -fx-padding:5 10;
+    -fx-text-fill:#3B6EF8;
+    -fx-font-family:"Google Sans Flex";
+}
+
+.menuButton{
+    -fx-pref-width:700;
+    -fx-pref-height:80;
+    -fx-background-color:white;
+    -fx-background-radius:18;
+    -fx-border-radius:18;
+    -fx-border-color:#D9D9D9;
+    -fx-font-size:20;
+    -fx-font-family:"Google Sans Flex";
+    -fx-alignment:CENTER_LEFT;
+    -fx-padding:0 25;
+}
+
+.menuButton:hover{
+    -fx-background-color:#F6F9FF;
+    -fx-border-color:#3B6EF8;
+    -fx-text-fill:#3B6EF8;
+}
+
+.searchField{
+    -fx-pref-height:42;
+    -fx-background-radius:12;
+    -fx-border-radius:12;
+    -fx-border-color:#D9D9D9;
+    -fx-background-color:white;
+    -fx-font-size:15;
+    -fx-font-family:"Google Sans Flex";
+    -fx-padding:0 15;
+}
+
+.searchField:focused{
+    -fx-border-color:#3B6EF8;
+}
+
+.resultTable{
+    -fx-background-color:white;
+    -fx-background-radius:18;
+    -fx-padding: 0;
+    -fx-border-color:#D9D9D9;
+    -fx-font-family:"Google Sans Flex";
+}
+
+.resultTable .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.resultTable .column-header {
+    -fx-background-color: #3B6EF8;
+    -fx-border-color:#D9D9D9;
+}
+
+.resultTable .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}
+
+.resultTable.table-row-cell{
+    -fx-background-color:white;
+    -fx-border-color:transparent transparent #EEEEEE transparent;
+}
+
+.resultTable.table-row-cell:hover{
+    -fx-background-color:#3B6EF8;
+}
+
+.resultTable.table-row-cell::selection{
+    -fx-background-color:#3B6EF8;
+}
+
+.displayLabel{
+    -fx-pref-height:40;
+    -fx-background-radius:12;
+    -fx-border-radius:12;
+    -fx-border-color:#464545;
+    -fx-background-color:#8b8b8b;
+    -fx-font-size:15;
+    -fx-font-family:"Google Sans Flex";
+    -fx-padding:0 15;
+}
+
+.addButton{
+    -fx-pref-width:180;
+    -fx-pref-height:65;
+    -fx-background-color:#3B6EF8;
+    -fx-background-radius:18;
+    -fx-border-radius:18;
+    -fx-border-color:#3B6EF8;
+    -fx-text-fill:white;
+    -fx-font-size:16;
+    -fx-font-family:"Google Sans Flex";
+}
+
+.addButton:hover{
+    -fx-background-color:#3B6EF8;
+    -fx-border-color:#1552ea;
+    -fx-text-fill:#1552ea;
+}
+
+.editButton{
+    -fx-pref-width:180;
+    -fx-pref-height:65;
+    -fx-background-color:white;
+    -fx-background-radius:18;
+    -fx-border-radius:18;
+    -fx-border-color:#D9D9D9;
+    -fx-font-size:16;
+    -fx-font-family:"Google Sans Flex";
+}
+
+.editButton:hover{
+    -fx-background-color:#F6F9FF;
+    -fx-border-color:#3B6EF8;
+    -fx-text-fill:#3B6EF8;
+}
+
+.removeButton{
+    -fx-pref-width:180;
+    -fx-pref-height:65;
+    -fx-background-color:white;
+    -fx-background-radius:18;
+    -fx-border-radius:18;
+    -fx-border-color:red;
+    -fx-text-fill:red;
+    -fx-font-size:16;
+    -fx-font-family:"Google Sans Flex";
+}
+
+.removeButton:hover{
+    -fx-background-color: #ec9d9d;
+}
+
+.returnButton{
+    -fx-background-color:#3B6EF8;
+    -fx-border-color:#D9D9D9;
+    -fx-background-radius:18;
+    -fx-border-radius:18;
+    -fx-text-fill:white;
+    -fx-font-family:"Google Sans Flex";
+}
+
+.returnButton:hover{
+    -fx-background-color:#3B6EF8;
+    -fx-border-color:#1552ea;
+    -fx-text-fill:#1552ea;
+}
+
+.generateButton{
+    -fx-pref-width:150;
+    -fx-pref-height:50;
+    -fx-background-color:#3B6EF8;
+    -fx-border-color:#D9D9D9;
+    -fx-background-radius:18;
+    -fx-border-radius:18;
+    -fx-text-fill:white;
+    -fx-font-size:16;
+    -fx-font-family:"Google Sans Flex";
+}
+
+.generateButton:hover{
+    -fx-background-color:#3B6EF8;
+    -fx-border-color:#1552ea;
+    -fx-text-fill:#1552ea;
+}
+
+.footer{
+    -fx-padding:20;
+    -fx-font-family:"Google Sans Flex";
+}
