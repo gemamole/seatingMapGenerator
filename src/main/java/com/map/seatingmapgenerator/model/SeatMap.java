@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 public class SeatMap {
     private int id;
+    private String chartName;
     private Classroom classroom;
     private Seat[][] chart;
     private LocalDateTime createdAt;
@@ -14,6 +15,14 @@ public class SeatMap {
     }
     public void setId(int id) {
         this.id = id;
+    }
+
+    //chart name getter and setter
+    public String getChartName() {
+        return chartName;
+    }
+    public void setChartName(String chartName) {
+        this.chartName = chartName;
     }
 
     //room getter and setter

@@ -15,9 +15,8 @@ public class ChartDAO {
         try(Connection conn = Database.connect();
             PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            ps.setInt(1, student.getId());
-            ps.setString(2, student.getName());
-            ps.setString(3, student.getGrade().name());
+            ps.setInt(1, seatMap.getId());
+            ps.setString(2, seatMap.getChartName());
 
             ps.executeUpdate();
 
