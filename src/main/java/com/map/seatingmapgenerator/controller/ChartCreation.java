@@ -33,7 +33,7 @@ public class ChartCreation {
         configureStudentTable();
 
         //initializing classroom table
-        //configureClassroomTable();
+        configureClassroomTable();
     }
 
     @FXML

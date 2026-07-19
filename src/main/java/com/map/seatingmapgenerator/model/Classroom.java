@@ -1,7 +1,11 @@
 package com.map.seatingmapgenerator.model;
 
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+
 public class Classroom {
     private int id, row, column, maxStudents;
+    private final BooleanProperty selected = new SimpleBooleanProperty(false);
 
     public Classroom(int id, int row, int column, int maxStudents) {
         this.id = id;
@@ -40,5 +44,16 @@ public class Classroom {
     }
     public void setMaxStudents(int maxStudents) {
         this.maxStudents = maxStudents;
+    }
+
+    //selected property getters and setters
+    public BooleanProperty selectedProperty() {
+        return selected;
+    }
+    public boolean isSelected() {
+        return selected.get();
+    }
+    public void setSelected(boolean selected) {
+        this.selected.set(selected);
     }
 }

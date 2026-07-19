@@ -1,11 +1,13 @@
 package com.map.seatingmapgenerator.model;
 
-import java.util.Scanner;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 
 public class Student {
     private String name;
     private int id;
     private Grade grade;
+    private final BooleanProperty selected = new SimpleBooleanProperty(false);
 
     public Student(String name, int id, Grade grade) {
         this.name = name;
@@ -37,4 +39,14 @@ public class Student {
         this.id = id;
     }
 
+    //selected property getters and setters
+    public BooleanProperty selectedProperty() {
+        return selected;
+    }
+    public boolean isSelected() {
+        return selected.get();
+    }
+    public void setSelected(boolean selected) {
+        this.selected.set(selected);
+    }
 }
