@@ -16,8 +16,10 @@ public class SeatingService {
     private final StudentDAO studentDAO;
     private final ClassroomDAO classroomDAO;
 
-    public SeatingService(ChartDAO chartDAO) {
+    public SeatingService(ChartDAO chartDAO,  StudentDAO studentDAO, ClassroomDAO classroomDAO) {
         this.chartDAO = chartDAO;
+        this.studentDAO = studentDAO;
+        this.classroomDAO = classroomDAO;
     }
 
     public SeatMap generate(Classroom room, List<Student> students) {

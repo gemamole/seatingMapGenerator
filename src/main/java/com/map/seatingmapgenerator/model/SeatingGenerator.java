@@ -12,7 +12,7 @@ public class SeatingGenerator {
 
         Seat[][] chart = new Seat[rows][cols];
 
-        map.setRoom(classroom);
+        map.setRoom(classroom.getId());
         map.setChart(chart);
 
         //order students by grade

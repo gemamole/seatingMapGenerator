@@ -82,6 +82,8 @@ public class ChartCreation {
                 cell.getValue().getValue().selectedProperty());
 
         selectedStudentColumn.setCellFactory(CheckBoxTreeTableCell.forTreeTableColumn(selectedStudentColumn));
+
+        //column configuration
     }
 
     @FXML

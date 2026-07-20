@@ -1,13 +1,23 @@
 package com.map.seatingmapgenerator.model;
 
+import java.sql.Date;
 import java.time.LocalDateTime;
 
 public class SeatMap {
     private int id;
     private String chartName;
-    private Classroom classroom;
+    private int classroomId;
     private Seat[][] chart;
     private LocalDateTime createdAt;
+
+    public SeatMap() {}
+
+    public SeatMap(int id, String chartName, int classroomId, Date createdAt) {
+        this.id = id;
+        this.chartName = chartName;
+        this.classroomId = classroomId;
+        this.createdAt = LocalDateTime.now();
+    }
 
     //id getter and setter
     public int getId() {
@@ -26,11 +36,11 @@ public class SeatMap {
     }
 
     //room getter and setter
-    public Classroom getRoom() {
-        return classroom;
+    public int getRoom() {
+        return classroomId;
     }
-    public void setRoom(Classroom classroom) {
-        this.classroom = classroom;
+    public void setRoom(int classroomId) {
+        this.classroomId = classroomId;
     }
 
     //seat map getter and setter

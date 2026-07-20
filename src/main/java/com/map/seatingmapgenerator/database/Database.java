@@ -38,8 +38,8 @@ public class Database {
             stmt.execute("""
                 CREATE TABLE IF NOT EXISTS seating_charts(
                     chart_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    classroom_id INTEGER,
                     chart_name TEXT,
+                    classroom_id INTEGER,
                     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
                     FOREIGN KEY(classroom_id) REFERENCES classrooms(classroom_id)
                 )

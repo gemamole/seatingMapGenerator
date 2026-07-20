@@ -23,7 +23,7 @@ public class SceneManager {
 
     private static final StudentService studentService = new StudentService(studentDAO);
     private static final ClassroomService classroomService = new ClassroomService(classroomDAO);
-    private static final SeatingService seatingService = new SeatingService(chartDAO);
+    private static final SeatingService seatingService = new SeatingService(chartDAO, studentDAO, classroomDAO);
 
     public static void switchScene(ActionEvent event,
                                    String fxml,
