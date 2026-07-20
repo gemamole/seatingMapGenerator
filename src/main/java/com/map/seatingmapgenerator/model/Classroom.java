@@ -3,7 +3,7 @@ package com.map.seatingmapgenerator.model;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 
-public class Classroom {
+public class Classroom implements Selectable{
     private int id, row, column, maxStudents;
     private final BooleanProperty selected = new SimpleBooleanProperty(false);
 

@@ -2,6 +2,7 @@ package com.map.seatingmapgenerator.controller;
 
 import com.map.seatingmapgenerator.model.Classroom;
 import com.map.seatingmapgenerator.model.Grade;
+import com.map.seatingmapgenerator.model.Selectable;
 import com.map.seatingmapgenerator.model.Student;
 import com.map.seatingmapgenerator.service.ClassroomService;
 import com.map.seatingmapgenerator.service.SeatingService;
@@ -15,6 +16,8 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.control.TreeTableView;
+import javafx.scene.control.cell.CheckBoxTableCell;
+import javafx.scene.control.cell.CheckBoxTreeTableCell;
 
 import java.io.IOException;
 import java.util.Comparator;
@@ -33,22 +36,22 @@ public class ChartCreation {
         configureStudentTable();
 
         //initializing classroom table
-        configureClassroomTable();
+        //configureClassroomTable();
     }
 
     @FXML
-    private TreeTableView<Object> studentTable;
+    private TreeTableView<Selectable> studentTable;
     @FXML
-    private TreeTableColumn<Student, CheckBox> selectedStudentColumn;
+    private TreeTableColumn<Selectable, Boolean> selectedStudentColumn;
     @FXML
-    private TreeTableColumn<Classroom, Integer> studentIdColumn;
+    private TreeTableColumn<Selectable, Integer> studentIdColumn;
     @FXML
-    private TreeTableColumn<Classroom, String> nameColumn;
+    private TreeTableColumn<Selectable, String> nameColumn;
 
     @FXML
     private void configureStudentTable() {
 
-        TreeItem<Object> root = new TreeItem<>("Students");
+        TreeItem<Selectable> root = new TreeItem<>();
         root.setExpanded(true);
 
         //Group students by grade
@@ -57,13 +60,13 @@ public class ChartCreation {
                         .collect(Collectors.groupingBy(Student::getGrade));
 
         //Create grade nodes
-        for (Map.Entry<Grade, List<Student>> entry : studentsByGrade.entrySet()) {
+        for (Grade grade : studentsByGrade.keySet()) {
 
-            TreeItem<Object> gradeNode =
-                    new TreeItem<>("Grade " + entry.getKey());
+            TreeItem<Selectable> gradeNode =
+                    new TreeItem<>(grade);
 
-            // Add students under the grade
-            for (Student student : entry.getValue()) {
+            //Add students under the grade
+            for (Student student : studentsByGrade.get(grade)) {
                 gradeNode.getChildren()
                         .add(new TreeItem<>(student));
             }
@@ -73,6 +76,12 @@ public class ChartCreation {
 
         studentTable.setRoot(root);
         studentTable.setShowRoot(false);
+
+        //checkbox column configuration
+        selectedStudentColumn.setCellValueFactory(cell ->
+                cell.getValue().getValue().selectedProperty());
+
+        selectedStudentColumn.setCellFactory(CheckBoxTreeTableCell.forTreeTableColumn(selectedStudentColumn));
     }
 
     @FXML

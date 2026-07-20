@@ -1,6 +1,11 @@
 package com.map.seatingmapgenerator.model;
 
-public enum Grade {
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+
+import java.io.Serializable;
+
+public enum Grade implements Selectable {
     FIRST("1 ano"),
     SECOND("2 ano"),
     THIRD("3 ano"),
@@ -30,5 +35,17 @@ public enum Grade {
             }
         }
         return null;
+    }
+
+    private final BooleanProperty selected = new SimpleBooleanProperty(false);
+
+    public BooleanProperty selectedProperty() {
+        return selected;
+    }
+    public boolean isSelected() {
+        return selected.get();
+    }
+    public void setSelected(boolean selected) {
+        this.selected.set(selected);
     }
 }
